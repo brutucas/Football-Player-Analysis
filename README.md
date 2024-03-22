@@ -22,11 +22,11 @@ If I had an enormous dataset, I would include code to specifically filter out, f
 
 Our first target as the data scouts is a centre forward. Ah, the fabled number 9 position. We need a 'tip-of-the-spear' goal scorer with boots like superglue and an uncanny ability to strike for gaps and hit the back of the net. Think someone like Harry Kane, but roughly 10 years younger and a miniscule fraction of the price.
 
-![image](https://github.com/brutucas/Football-Player-Analysis/assets/154451874/a7cdd34e-21aa-43a8-ad35-5e0af8d9f869) jus' gawjuss, aintee?
+![image](https://github.com/brutucas/Football-Player-Analysis/assets/154451874/a7cdd34e-21aa-43a8-ad35-5e0af8d9f869) 
 
-How are we going to find such a player in the masses of data? I got project inspiration and practical tips from an article[^fn1] that explored football data in the Serbian top-flight league to find undervalued, young players. Unless you and I are fans of this less well-known league (or, as the author writes, have "an unhealthy obsession with the Football Manager game"), it is very unlikely that we would ever notice the talented players on those lesser teams that will not traditionally challenge for a title.
+How are we going to find such a player in the masses of data? I got project inspiration and practical tips from an article([^fn1]) that explored football data in the Serbian top-flight league to find undervalued, young players. Unless you and I are fans of this less well-known league (or, as the author writes, have "an unhealthy obsession with the Football Manager game"), it is very unlikely that we would ever notice the talented players on those lesser teams that will not traditionally challenge for a title.
 
-So, the answer is data. This tool is reliable to identify players, who may fit the desired player profiles for Shaolin FC, from leagues not just in Serbia but around the world[^fn2]. Drawing inspiration from Scott's article, I am going to initially filter my combined dataframe for the metric '% of involvement in team goals'. 
+So, the answer is data. This tool is reliable to identify players, who may fit the desired player profiles for Shaolin FC, from leagues not just in Serbia but around the world([^fn2]). Drawing inspiration from Scott's article, I am going to initially filter my combined dataframe for the metric '% of involvement in team goals'. 
 
 This is a very clever metric. It does not only assess the goals scored, but also assists, which ensures that we have a complete overview of strong, attacking players. Different players have different assets and a superb playmaker can contribute enormously to his team's success without often finishing the job himself. This is obvious upon reflection, but I am learning that the potential of raw data can often lie in the choice of metric, which might (as in this case) require testing out different combinations.
 
@@ -34,7 +34,7 @@ My dataframe already contains the combined metric. I will complete a manual test
 
 This will require a filtered dataframe:
 1. Remove defenders and goalkeepers and any other outfield players who have not been on the field in at least 50% of matches.
-2. Only include renamed columns of 'goals per 90 minutes', 'assists per 90 minutes', 'goals plus assists per 90 minutes', 'expected goals per 90 minutes', 'expected assists per 90 minutes', 'expected goals plus expected assists per 90 minutes', 'position', 'age', 'total minutes'.
+2. Only include renamed columns that are relevant to this search([^fn3]).
 
 How do I calculate the player involvement in team goals? Firstly, I want to have the results from the data, which I will visualise in a bar chart to identify good candidates, then measure against the total goals for the player's team. The results of this calculation - '% of involvement in team goals' - will also be visualised in a bar chart. 
 
@@ -61,3 +61,4 @@ How do I connect my dataframe to the information source as it is refreshed with 
 #### Footnotes:
 [^fn1] This extremely informative article can be found on the [Total Football Analysis](https://totalfootballanalysis.com/data-analysis/data-analysis-finding-undervalued-young-players-in-the-serbian-top-flight) website, written by Lee Scott, who (as of February 2024) works as a player scout at Southampton FC. 
 [^fn2] I am late to the football data party, and nothing presented in this project is brand-spanking new or particularly groundbreaking, but I am now a data nerd (albeit uncertified). During the project, I have daydreamed more than a few times about an enormous, world-spanning dataframe with all of the datapoints available for any player and any team anywhere in the world.. *sigh* There are datasets available on websites behind steep paywalls, which will undoubtedly be used by top scouts. The broader trend in football seems to be moving away from the mere existence and vanilla usage of data, and towards the question of *how*. Which metrics should we generate and measure when everyone has access to the same data? 
+([^fn3]) The columns are likely to be (in no particular order) 'goals per 90 minutes', 'assists per 90 minutes', 'goals plus assists per 90 minutes', 'expected goals per 90 minutes', 'expected assists per 90 minutes', 'expected goals plus expected assists per 90 minutes', 'position', 'age', 'total minutes'.
