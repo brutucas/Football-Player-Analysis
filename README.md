@@ -24,7 +24,7 @@ Our first target as the data scouts is a centre forward. Ah, the fabled number 9
 
 ![image](https://github.com/brutucas/Football-Player-Analysis/assets/154451874/a7cdd34e-21aa-43a8-ad35-5e0af8d9f869) 
 
-How are we going to find such a player in the masses of data? I got project inspiration and practical tips from an article [^fn1] that explored football data in the Serbian top-flight league to find undervalued, young players. Unless you and I are fans of this less well-known league (or, as the author writes, have "an unhealthy obsession with the Football Manager game"), it is very unlikely that we would ever notice the talented players on those lesser teams that will not traditionally challenge for a title.
+How are we going to find such a player in the masses of data? I got project inspiration and practical tips from an article[^fn1] that explored football data in the Serbian top-flight league to find undervalued, young players. Unless you and I are fans of this less well-known league (or, as the author writes, have "an unhealthy obsession with the Football Manager game"), it is very unlikely that we would ever notice the talented players on those lesser teams that will not traditionally challenge for a title.
 
 So, the answer is data. This tool is reliable to identify players, who may fit the desired player profiles for Shaolin FC, from leagues not just in Serbia but around the world.[^fn2] Drawing inspiration from Scott's article, I am going to initially filter my combined dataframe for the metric '% of involvement in team goals'. 
 
