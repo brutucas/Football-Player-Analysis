@@ -1,4 +1,4 @@
-# Football-Player-Analysis
+# Football Player Analysis
 
 ## Introduction
 
@@ -114,6 +114,13 @@ Instead of only buying the 23-year old Polish striker for £6m from the Italian 
 ### Post-Project Reflections
 
 This is an important section. I have learned an enormous amount through this project. "I'm not the data scientist I once was." Generally, I could recreate my project findings in a fraction of the time, and I found myself typing plenty of more basic code instinctively and from memory. It goes without saying, but these were BIG moments for me.
+
+If I was to restart this project, I would simply filter for those data metrics I want from the very beginning with as large, legible and ordered a dataset as possible.
+For example, here I would simply measure the goal contributions as the initial metric, then upon collecting a larger pool of outliers, identify those top goalscorers. If they have excellent goal contributions, they are already promising strikers. Armed with this knowledge and experience, in future projects I will be able to better work backwards from the desired outcome. 
+
+However, this project is incomplete. Once you have read through this website and final report, please check out the upcoming *Next Steps* dashboard (currently a WIP). It showcases a customisable *Talent Finder* dashboard with MUCH larger quantity of potential players, all grouped roughly to similar tiers and with the same *league adjustment* coefficient. It is worth noting that in this project that I have completed, all of the leagues are European with not inconsiderable exposure and attention, despite being second divisions. Consequently, these players probably have transfer values that already reflect any outlier abilities and performance metrics.
+
+The example of Brighton in the English Premier League could be more informative to Shaolin.FC for the development of a true *Moneyball* strategy with identification and purchase of massively underpriced talent. Thank you for your time and attention!
 
 **Important Insight #1**
 One of the first comments I made to my tutor was "Getting good data is super important and also super rare!" He laughed and nodded. This is obvious to anyone who hs been working for any time in he industry, but I was stunned at the widespread availability of junk and the difficulty of acquiring plentiful AND meaningful data. I need quality and quantity. No wonder Google, Fscebook, et al are selling services and products for free - the data they acquire from us is valuable. 
