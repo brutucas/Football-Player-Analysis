@@ -94,6 +94,7 @@ Here are several charts that show the results from a variety of checks for strik
 
 ![Shots on Target (SOT) per 90 vs Goals per SOT for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Shots%20on%20Target%20(SOT)%20per%2090%20vs%20Goals%20per%20SOT%20for%20U23%20Strikers%20of%20Interest.png)
 ![Shot-Creating Actions (SCA) vs Goal-Creating Actions (GCA) per 90 for U23 Strikers](/Resources/Project%20Images/Graph%20Images/Shot-Creating%20Actions%20(SCA)%20vs%20Goal-Creating%20Actions%20(GCA)%20per%2090%20for%20U23%20Strikers.png)
+![Shot-Creating Action (SCA) Take-ons vs Goal-Creating Action (GCA) Take-ons for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Shot-Creating%20Action%20(SCA)%20Take-ons%20vs%20Goal-Creating%20Action%20(GCA)%20Take-ons%20for%20U23%20Strikers%20of%20Interest.png)
 ![Aerial Duels Won (%) for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Aerial%20Duels%20Won%20(%25)%20for%20U23%20Strikers%20of%20Interest.png)
 ![Interceptions vs Loose Balls Recovered for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Interceptions%20vs%20Loose%20Balls%20Recovered%20for%20U23%20Strikers%20of%20Interest.png)
 ![Shot-Creating Action (SCA) Live-Ball Passes vs Goal-Creating Action (GCA) Live-Ball Passes for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Shot-Creating%20Action%20(SCA)%20Live-Ball%20Passes%20vs%20Goal-Creating%20Action%20(GCA)%20Live-Ball%20Passes%20for%20U23%20Strikers%20of%20Interest.png)
