@@ -93,14 +93,19 @@ This extra data was cleaned and visualised (as seen below) with various graphs (
 Here are several charts that show the results from a variety of checks for striker-specific performance metrics:
 
 ![Shots on Target (SOT) per 90 vs Goals per SOT for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Shots%20on%20Target%20(SOT)%20per%2090%20vs%20Goals%20per%20SOT%20for%20U23%20Strikers%20of%20Interest.png)
-![Shot-Creating Actions (SCA) vs Goal-Creating Actions (GCA) per 90 for U23 Strikers](/Resources/Project%20Images/Graph%20Images/Shot-Creating%20Actions%20(SCA)%20vs%20Goal-Creating%20Actions%20(GCA)%20per%2090%20for%20U23%20Strikers.png)
-![Shot-Creating Action (SCA) Take-ons vs Goal-Creating Action (GCA) Take-ons for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Shot-Creating%20Action%20(SCA)%20Take-ons%20vs%20Goal-Creating%20Action%20(GCA)%20Take-ons%20for%20U23%20Strikers%20of%20Interest.png)
 ![Aerial Duels Won (%) for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Aerial%20Duels%20Won%20(%25)%20for%20U23%20Strikers%20of%20Interest.png)
 ![Interceptions vs Loose Balls Recovered for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Interceptions%20vs%20Loose%20Balls%20Recovered%20for%20U23%20Strikers%20of%20Interest.png)
 ![Shot-Creating Action (SCA) Live-Ball Passes vs Goal-Creating Action (GCA) Live-Ball Passes for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Shot-Creating%20Action%20(SCA)%20Live-Ball%20Passes%20vs%20Goal-Creating%20Action%20(GCA)%20Live-Ball%20Passes%20for%20U23%20Strikers%20of%20Interest.png)
 ![Passes Successfully Received vs Live Touches for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Passes%20Successfully%20Received%20vs%20Live%20Touches%20for%20U23%20Strikers%20of%20Interest.png)
 
+### Data-Scout Recommendations
+A quick web search for the market values of the most promising U23 strikers of interest completely ruled out Thiago, Kevin Denkey, and Mohamed Amoura. Furthermore, as can be seen on the Streamlit website, their league-adjusted performance metrics (being in a weaker football league) left me with numerous question marks about their higher price tags. Now, I could be completely mistaken about the co-efficient rating for the Belgian league - in my defence, I took the rating directly from UEFA. If there are any fuming Belgians reading this, please don't shoot the messenger/data scientist - go and ask them. 
 
+With regards to the coefficient league ratings for the German and Italian second divisions, I simply subtracted 0.25 from their respective first divisions. Both the 2. Bundesliga and Serie B were consequently more than 0.10 above the Belgian Pro League. If I have completely misjudged the coefficients, then these 3 players should obviously be considered and I would need to redo my graphs with actualised data. However, the players are out of the imaginary budget of Shaolin.FC anyway - but I want to be transparent about my conclusions and subsequent player recommendations. My expectation is that both Duesseldorf and Nuernberg would give the Belgian teams a good challenge, and possibly win. 
+
+I am very confident that the Ligue 2 coefficient rating is realistic, and as can be seen in his radar chart, the league-adjusted stats for Andreas Hountondji appear significantly weaker. Christos Tzolis (and arguably also Can Uzun) are primarily playing in midfield or wing positions, which would perhaps completely rule them out of the candidate pool. To avoid this in future, I will filter the initial dataframe for those attackers with only 'FW' in the 'Position' column. Both are also pricey and therefore perhaps an expensive risk - certainly not a good choice for Number 9.
+
+Peque and 
 
 ### Post-Project Reflections
 
