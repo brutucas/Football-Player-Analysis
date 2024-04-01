@@ -105,7 +105,11 @@ With regards to the coefficient league ratings for the German and Italian second
 
 I am very confident that the Ligue 2 coefficient rating is realistic, and as can be seen in his radar chart, the league-adjusted stats for Andreas Hountondji appear significantly weaker. Christos Tzolis (and arguably also Can Uzun) are primarily playing in midfield or wing positions, which would perhaps completely rule them out of the candidate pool. To avoid this in future, I will filter the initial dataframe for those attackers with only 'FW' in the 'Position' column. Both are also pricey and therefore perhaps an expensive risk - certainly not a good choice for Number 9.
 
-Peque and 
+Peque is not a Number 9 forward, but happily a cheap supporting striker, who is posting extremely good stats. A definite outlier, who (thanks to the use of data) has been identified - at only 21 years old, I would expect him to appear in the starting lineup of stronger leagues (perhaps a solid La Liga club like Sevilla or mid-league Bundesliga squad). His transfer value will likely x10 in the next 5 years. Most likely not a superstar, but a striker with bags of potential. BUY NOW.
+
+With the data results given above, Benedyczak and Matanovic are both outlier forwards, who fit a similar profile to the one I selected at the beginning of the project. My first choice would be Matanovic, as he is only 20 years old with some very impressive striker metrics. He is not too quick, and definitely needs some polishing from a wise and perceptive coach, but he comes at only £4m. 
+
+Instead of only buying the 23-year old Polish striker for £6m from the Italian second league, get Matanovic AND Peque for basically the same price - glue the Croatian forward and Spanish supporting striker together into an indomitable pairing that will make Shaolin.FC unstoppable.
 
 ### Post-Project Reflections
 
