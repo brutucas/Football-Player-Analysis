@@ -2,12 +2,14 @@
 
 ## Introduction
 
-This data science project is going to explore the intersection of English football - not gridiron handegg - with data. I have included a backstory to help visualise the power of data - both to unearth bargains and hidden talent, but also more crucially to democratise the world. The correct application of data can prioritise those key performane metrics, potentially rewarding those footballers who are playing well and doing good things on the pitch. *How many players have missed out on opportunities to hit the big leagues, despite having feet kissed by God, due to chance, poverty, the birthplace lottery, and other similar circumstances of 'fate'?* For whatever reason, their spark got missed, the opportunity passsed, and they ended up nowhere near their potential. For various reasons, a minority of players like Jamie Vardy and N'Golo Kante have demonstrated to the sports world that talent exists, yet is regularly missed. Data can help us see with clearer, truer vision, and this is what I have shown with this project.
+This data science project is going to explore the intersection of English football - not gridiron handegg - with data. I have included a backstory to help visualise the power of data - both to unearth bargains and hidden talent, but also more crucially to democratise the world. The correct application of data can prioritise those key performane metrics, potentially rewarding those footballers who are playing well and doing good things on the pitch. 
+
+*How many players have missed out on opportunities to hit the big leagues, despite having feet kissed by God, due to chance, poverty, the birthplace lottery, and other similar circumstances of 'fate'?* For whatever reason, their spark got missed, the opportunity passsed, and they ended up nowhere near their potential. For various reasons, a minority of players like Jamie Vardy and N'Golo Kante have demonstrated to the sports world that talent exists, yet is regularly missed. Data can help us see with clearer, truer vision, and this is what I have shown with this project.
 
 The questions I asked myself in the planning stage of this project: 
-*Are there young, outlier footballers, who are undervalued but performing exceptionally in their respective teams and leagues?*
-*Can I identify, isolate, and visualise the data for such truly talented players with bargain transfer market values?* 
-*Will I be able to walk the Way of the Snake (Python) and acquire the power of 'Painted Bear' Style (Pandas) to achieve this quest?*  
+- *Are there young, outlier footballers, who are undervalued but performing exceptionally in their respective teams and leagues?*
+- *Can I identify, isolate, and visualise the data for such truly talented players with bargain transfer market values?* 
+- *Will I be able to walk the Way of the Snake (Python) and acquire the power of 'Painted Bear' Style (Pandas) to achieve this quest?*  
 
 Now, one problem is that player data in any of these leagues is very probably going to be skewed towards the teams performing towards the top of the table. We want to ignore those players in the top teams, such as Bayern Munich in the Bundesliga or Real Madrid in the La Liga, as they are will not be relevant to this project. I have deliberately collated a dataset of those second divisions and lesser leagues, however, if I discover during the course of my data analysis that bargain-priced players are being crowded out, I will reassess.
 
@@ -19,7 +21,8 @@ If I had an enormous dataset, I would include code to specifically filter out, f
 
 As data-scout for Shaolin.FC, we have a weighty responsibility to find excellent players going unnoticed with low transfer market values. Our target in this data project is a centre forward. Ah, the fabled number 9 position. We need a 'tip-of-the-spear' goalscorer with boots like volcanic superglue, and an uncanny ability to strike for gaps and hit the back of the net. Think someone like Harry Kane, but roughly 10 years younger and a miniscule fraction of the price.
 
-![image](https://github.com/brutucas/Football-Player-Analysis/assets/154451874/a7cdd34e-21aa-43a8-ad35-5e0af8d9f869) A top striker with enviable stats AND even more enviable looks. Gawjus.
+![image](https://github.com/brutucas/Football-Player-Analysis/assets/154451874/a7cdd34e-21aa-43a8-ad35-5e0af8d9f869) 
+*WOW! A top striker with enviable stats AND even more enviable looks. Gawjus.*
 
 How are we going to find such a player in the masses of data? I got project inspiration and practical tips from an article[^fn1] that explored football data in the Serbian top-flight league to find undervalued, young players. Unless you and I are fans of this less well-known league (or, as the author writes, have "an unhealthy obsession with the Football Manager game"), it is very unlikely that we would ever notice the talented players on those lesser teams that will not traditionally challenge for a title.
 
@@ -33,7 +36,9 @@ This will require a filtered dataframe:
 1. Remove defenders and goalkeepers and any other outfield players who have not been on the field in at least 50% of matches.
 2. Only include renamed columns that are relevant to this search.[^fn3]
 
-How do I calculate the player involvement in team goals? Firstly, I want to have the results from the data, which I will visualise in a bar chart to identify good candidates, then measure against the total goals for the player's team. The results of this calculation - '% of involvement in team goals' - will also be visualised in a bar chart. 
+*How do I calculate the player involvement in team goals?* Firstly, I want to have the results from the data, which I will visualise in a bar chart to identify good candidates, then measure against the total goals for the player's team. The results of this calculation - '% of involvement in team goals' - will also be visualised in a bar chart.
+
+![image]
 
 I will also be interested in finding out if the same players are featuring in results from '% of involvement in team expected goals'. If so, I will probably have found good candidates for deeper individual analysis.
 
