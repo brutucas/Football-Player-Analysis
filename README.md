@@ -13,13 +13,16 @@ The questions I asked myself in the planning stage of this project:
 
 Now, one problem is that player data in any of these leagues is very probably going to be skewed towards the teams performing towards the top of the table. We want to ignore those players in the top teams, such as Bayern Munich in the Bundesliga or Real Madrid in the La Liga, as they are will not be relevant to this project. I have deliberately collated a dataset of those second divisions and lesser leagues, however, if I discover during the course of my data analysis that bargain-priced players are being crowded out, I will reassess.
 
-If I had an enormous dataset, I would include code to specifically filter out, for example, the top 3-5 clubs, whose player data will skew the results and muddy the findings.
+Here are two examples of the initial league dataframes pre-concatenation:
+![Initial 2. Bundesliga Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/1.%20Initial%202.%20Bundesliga%20Dataframe.png)
+![Initial Belgian Pro League Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/2.%20Initial%20Belgian%20Pro%20League%20Dataframe.png)
+
 
 ## Identify the key metrics
 
 ### Striker
 
-As data-scout for Shaolin.FC, we have a weighty responsibility to find excellent players going unnoticed with low transfer market values. Our target in this data project is a centre forward. Ah, the fabled number 9 position. We need a 'tip-of-the-spear' goalscorer with boots like volcanic superglue, and an uncanny ability to strike for gaps and hit the back of the net. Think someone like Harry Kane, but roughly 10 years younger and a miniscule fraction of the price.
+As data-scout for Shaolin.FC, I have a weighty responsibility to find excellent players going unnoticed with low transfer market values. Our target in this data project is a centre forward. Ah, the fabled number 9 position. We need a 'tip-of-the-spear' goalscorer with boots like volcanic superglue, and an uncanny ability to strike for gaps and hit the back of the net. Think someone like Harry Kane, but roughly 10 years younger and a miniscule fraction of the price.
 
 ![image](https://github.com/brutucas/Football-Player-Analysis/assets/154451874/a7cdd34e-21aa-43a8-ad35-5e0af8d9f869) 
 *WOW! A top striker with enviable stats AND even more enviable looks. Gawjus.*
@@ -30,21 +33,45 @@ So, the answer is data. This tool is reliable to identify players, who may fit t
 
 This is a very clever metric. It does not only assess the goals scored, but also assists, which ensures that we have a complete overview of strong, attacking players. Different players have different assets and a superb playmaker can contribute enormously to his team's success without often finishing the job himself. This is obvious upon reflection, but I am learning that the potential of raw data can often lie in the choice of metric, which might (as in this case) require testing out different combinations.
 
-My dataframe already contains the combined metric. I will complete a manual test to make sure that the data has been inputted correctly and use my burgeoning dataframe superpowers to flag any discrepancies. Once I have completed an initial analysis of involvement in team goals (for the moment, only looking at past performance of goals and assists), I will compare the results to the *expected* goals and assists to identify any overperforming players, who are not immediately visible.
-
 This will require a filtered dataframe:
-1. Remove defenders and goalkeepers and any other outfield players who have not been on the field in at least 50% of matches.
+1. Identify and combine duplicate rows for players that have transferred clubs mid-season.
 2. Only include renamed columns that are relevant to this search.[^fn3]
+
+![Identify Duplicate Players](/Resources/Project%20Images/Screenshot%20Evidence/Identify%20Duplicate%20Players.png)
+![Joining Rows for Duplicate](/Resources/Project%20Images/Screenshot%20Evidence/Joining%20Rows%20for%20Duplicate.png)
+
+![Combined Players Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/3.%20Combined%20Players%20Dataframe.png)
+![Filtered Players Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/4.%20Filtered%20Players%20Dataframe.png)
+
+At this point, I am only interested in attacking players and those footballers who have been on the field in at least 50% of matches (rough calculation at this point in the season was ~13 games). Upon creating these subset dataframes, I also filtered for age to remove any strikers older than 23.
+
+![Attacking Players Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/Attacking%20Players%20Dataframe.png)
+![Creating U23 Attacking Player Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/Creating%20U23%20Attacking%20Player%20Dataframe.png)
+
+![Top 30 U23 Scorers](/Resources/Project%20Images/Screenshot%20Evidence/Top%2030%20U23%20Scorers.png)
+![Top Scorers Common](/Resources/Project%20Images/Screenshot%20Evidence/Top%20Scorers%20Common.png)
+
+I wanted to confirm the presence of particular players, who were reappearing across multiple checks, in particular if certain top U23 strikers continued to show outlier performance stats against much older and more experienced strikers. The list was small, but proved very informative.
+![Best U23 Strikers](/Resources/Project%20Images/Screenshot%20Evidence/Best%20U23%20Strikers.png)
+![Best U23 Scorers](/Resources/Project%20Images/Screenshot%20Evidence/Best%20U23%20Scorers.png)
 
 *How do I calculate the player involvement in team goals?* Firstly, I want to have the results from the data, which I will visualise in a bar chart to identify good candidates, then measure against the total goals for the player's team. The results of this calculation - '% of involvement in team goals' - will also be visualised in a bar chart.
 
-![image]
 
-I will also be interested in finding out if the same players are featuring in results from '% of involvement in team expected goals'. If so, I will probably have found good candidates for deeper individual analysis.
+This particular graph came much later in the project, once I had filtered and analysed the data to identify these players of interest. 
+![Contribution to Team Goals](/Resources/Project%20Images/Screenshot%20Evidence/%25%20Contribution%20to%20Team%20Goals%20for%20U23%20Strikers%20of%20Interest.png)
+
+My dataframe already contains the combined metric. I will complete a manual test to make sure that the data has been inputted correctly and use my burgeoning dataframe superpowers to flag any discrepancies. Once I have completed an initial analysis of involvement in team goals (for the moment, only looking at past performance of goals and assists), I will compare the results to the goals and assists per 90 minutes to confirm any overperforming players, who are not immediately visible.
+
+
+
+I will also be interested in finding out if the same players are featuring in results from '% of involvement in team expected goals'. If so, I will probably have found good candidates for deeper individual analysis. 
 
 Outliers should not be ignored. For instance, a player who has not played as many minutes, but made a disproportionate contribution to his team's success. To that end, I will create a few scatter plots with a few of the metrics to see if the data contains any surprises. 
 
-Now is selection time! I will choose the 3-5 players that look most interesting and promising.
+Now is selection time! I will choose the players that look most interesting and promising.
+
+
 
 At this point, I will filter information from the original combined dataframe to include all of the metrics for these specific players. This will require drawing more specific, individualised data from FBref.com, such as passing, pass types, posession, and miscellaneous stats - none of which are included in the standard stats. This extra data will be cleaned and (eventually) visualised with radar charts to better understand the personal profiles of each of the 3-5 selected players. 
 
@@ -59,7 +86,9 @@ One of the first comments I made to my tutor was "Getting good data is super imp
 When confronted by a paywall, always check to see if there are any backdoors on the website that give access to the information (without webscraping and data piracy). This was the case on FBref.com, from which I sourced all of the player data from the various football leagues. I returned to the website a week or two after compiling the data and combining into a single dataframe, and initially struggled to find it again. I thought a paywall had been slammed down - "Was it something I said?" - and indeed, a paid subscription exists. But thankfully, no! The website was cunningly hidden elsewhere on the website - definitely a source of relief to find the data still available when I needed to check the acronyms in the column names.
 
 **Important Insight #3**
-*How do I connect my dataframe to the information source as it is refreshed with updated player data every weekend?* This was a question that cropped up a few weeks into the project, and eventually led to the hyper-focused creation (all in an eventually successful effort to get rid of the brainworm that would not let me rest) of a much larger initial footballer dataframe with data from 30+ leagues and included tier groupings to account for league difficulty. This involved delving deeper into the world of data, and setting sail to begin my illustrious (and hopefully one day infamous) career as a lawful, web-scraping 'data privateer'. God, Save the King.
+*How do I connect my dataframe to the information source as it is refreshed with updated player data every weekend?* This was a question that cropped up a few weeks into the project, and eventually led to the hyper-focused creation (all in an eventually successful effort to get rid of the brainworm that would not let me rest) of a much larger, URL-connected footballer dataframe with data from 30+ leagues and included tier groupings to account for league difficulty. 
+
+involved delving deeper into the world of data, and setting sail to begin my illustrious (and hopefully one day infamous) career as a lawful, web-scraping 'data privateer'. God, Save the King. In the future, as I mention later, if I had an enormous dataset, I would include code to specifically filter out, for example, the top 3-5 clubs, whose player data will skew the results and muddy the findings.
 
 **Important Insight #4**
 Part of the final reflections in this project necessarily involve plenty of realising that I didn't choose the quickest or most efficient ways at the start. For example, when setting out to find a fearsome Number 9 striker for the up-and-coming Shaolin.FC, I should not only have thought about a player like Harry Kane, but actively identified and compared his stats and visualised performance profile (now that I can build radar charts). This would have helped me isolate and measure those specific metrics from the very beginning - an exciting prospect when combined with the aforementioned massive dataframe!
