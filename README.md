@@ -14,6 +14,7 @@ The questions I asked myself in the planning stage of this project:
 Now, one problem is that player data in any of these leagues is very probably going to be skewed towards the teams performing towards the top of the table. We want to ignore those players in the top teams, such as Bayern Munich in the Bundesliga or Real Madrid in the La Liga, as they are will not be relevant to this project. I have deliberately collated a dataset of those second divisions and lesser leagues, however, if I discover during the course of my data analysis that bargain-priced players are being crowded out, I will reassess.
 
 Here are two examples of the initial league dataframes pre-concatenation:
+
 ![Initial 2. Bundesliga Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/1.%20Initial%202.%20Bundesliga%20Dataframe.png)
 ![Initial Belgian Pro League Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/2.%20Initial%20Belgian%20Pro%20League%20Dataframe.png)
 
@@ -36,32 +37,34 @@ This will require a filtered dataframe:
 1. Identify and combine duplicate rows for players that have transferred clubs mid-season.
 2. Only include renamed columns that are relevant to this search.[^fn3]
 
+These images show the dataframe results for duplicate players and the result of combining their data into single rows.
+
 ![Identify Duplicate Players](/Resources/Project%20Images/Screenshot%20Evidence/Identify%20Duplicate%20Players.png)
 ![Joining Rows for Duplicate](/Resources/Project%20Images/Screenshot%20Evidence/Joining%20Rows%20for%20Duplicate.png)
 
-![Combined Players Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/3.%20Combined%20Players%20Dataframe.png)
+Here are the final dataframes with 3000+ players ready for further filtering and analysis.
+
 ![Filtered Players Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/4.%20Filtered%20Players%20Dataframe.png)
+![Combined Players Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/3.%20Combined%20Players%20Dataframe.png)
 
 At this point, I am only interested in attacking players and those footballers who have been on the field in at least 50% of matches (rough calculation at this point in the season was ~13 games). Upon creating these subset dataframes, I also filtered for age to remove any strikers older than 23.
 
 ![Attacking Players Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/Attacking%20Players%20Dataframe.png)
 ![Creating U23 Attacking Player Dataframe](/Resources/Project%20Images/Screenshot%20Evidence/Creating%20U23%20Attacking%20Player%20Dataframe.png)
 
-I ran some checks to find the top scorers (measuring both goals *and* assists).
+I ran some checks to find the top scorers (measuring both goals *and* assists). The second image shows the results with descending data - I included the Goals per 90 to ensure as much as possible that the results were reliable and consistent.
 
 ![Top 30 U23 Scorers](/Resources/Project%20Images/Screenshot%20Evidence/Top%2030%20U23%20Scorers.png)
 ![Top Scorers Common](/Resources/Project%20Images/Screenshot%20Evidence/Top%20Scorers%20Common.png)
 
-I wanted to confirm the presence of particular players, who were reappearing across multiple checks, in particular if certain top U23 strikers continued to show outlier performance stats against much older and more experienced strikers. The list was small, but proved very informative.
+I wanted to confirm the presence of particular players, who were reappearing across multiple checks, in particular if certain top U23 strikers continued to show outlier performance stats against much older and more experienced strikers. The list was small, but proved very informative, as you can see certain names repeated across both lists.
 
 ![Best U23 Strikers](/Resources/Project%20Images/Screenshot%20Evidence/Best%20U23%20Strikers.png)
 ![Best U23 Scorers](/Resources/Project%20Images/Screenshot%20Evidence/Best%20U23%20Scorers.png)
 
-*How do I calculate the player involvement in team goals?* Firstly, I want to have the results from the data, which I will visualise in a bar chart to identify good candidates, then measure against the total goals for the player's team. The results of this calculation - '% of involvement in team goals' - will also be visualised in a bar chart on my Streamlit website. This particular graph came much later in the project, once I had filtered and analysed the data to identify these players of interest.
+*How do I calculate the player involvement in team goals?* Firstly, I want to have the results from the data, which will isolate good candidates, then measure against the total goals for the player's team. 
 
-![Contribution to Team Goals](/Resources/Project%20Images/Screenshot%20Evidence/%25%20Contribution%20to%20Team%20Goals%20for%20U23%20Strikers%20of%20Interest.png)
-
-My dataframe already contains the combined metric. I will complete a manual test to make sure that the data has been inputted correctly and use my burgeoning dataframe superpowers to flag any discrepancies. Once I have completed an initial analysis of involvement in team goals (for the moment, only looking at past performance of goals and assists), I will compare the results to the goals and assists per 90 minutes to confirm any overperforming players, who are not immediately visible.
+I will use my burgeoning dataframe superpowers to flag any discrepancies. Once I have completed an initial analysis of involvement in team goals (for the moment, only looking at past performance of goals and assists), I will compare the results to the goals and assists per 90 minutes to confirm any overperforming players, who are not immediately visible.
 
 ![Total Goal Contributions for Top 30 Attacking Players](/Resources/Project%20Images/Graph%20Images/Total%20Goal%20Contributions%20for%20Top%2030%20Attacking%20Players.png)
 ![Top Goal Contributions per 90 for Top 30 Attacking Players](/Resources/Project%20Images/Graph%20Images/Top%20Goal%20Contributions%20per%2090%20for%20Top%2030%20Attacking%20Players.png)
@@ -71,9 +74,19 @@ Unsurprisingly, I kept returning to goal contributions (both total and per 90) a
 ![Goals vs Minutes Played for U23 Strikers](/Resources/Project%20Images/Graph%20Images/Goals%20vs%20Minutes%20Played%20for%20U23%20Strikers.png)
 ![Goal Contributions vs Minutes Played for U23 Strikers](/Resources/Project%20Images/Graph%20Images/Goal%20Contributions%20vs%20Minutes%20Played%20for%20U23%20Strikers.png)
 
+This particular dataframe check came towards the end of the project, once I had filtered and analysed the data to identify these players of interest.
+
+![Contribution to Team Goals](/Resources/Project%20Images/Screenshot%20Evidence/%25%20Contribution%20to%20Team%20Goals%20for%20U23%20Strikers%20of%20Interest.png)
+
+The results of this calculation - '% of involvement in team goals' - are visualised in a bar chart, which I have also included on my Streamlit website. 
+
+![% Contribution to Team Goals for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/%25%20Contribution%20to%20Team%20Goals%20for%20U23%20Strikers%20of%20Interest.png)
+
 It goes without saying, but if the same players are featuring in results from '% of involvement in team expected goals', I will probably have found good candidates for deeper individual analysis. Outliers should not be ignored. For instance, a player who has not played as many minutes, but made a disproportionate contribution to his team's success. To that end, I will create a few scatter plots with a few of the metrics to see if the data contains any surprises. 
 
-Now is selection time! At this point, I filtered information from the original combined dataframe to include all of the metrics for these specific players. I also struggled to get specific information automatically from my JupyterLab setup and opted for manual copy+paste into a Google Sheets document. This enabled me to acquire more specific, individualised data from FBref.com, such as passing, pass types, posession, and miscellaneous stats - none of which are included in the standard stats. 
+#### Selection time! 
+
+At this point, I filtered information from the original combined dataframe to include all of the metrics for these specific players. I also struggled to get specific information automatically from my JupyterLab setup and opted for manual copy+paste into a Google Sheets document. This enabled me to acquire more specific, individualised data from FBref.com, such as passing, pass types, posession, and miscellaneous stats - none of which are included in the standard stats. 
 
 This extra data was cleaned and visualised (as seen below) with various graphs (and radar charts on my Streamlit website) to better understand the personal profiles of each player of interest. I will analyse the players to find those that look most interesting and promising.
 
@@ -85,6 +98,8 @@ Here are several charts that show the results from a variety of checks for strik
 ![Interceptions vs Loose Balls Recovered for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Interceptions%20vs%20Loose%20Balls%20Recovered%20for%20U23%20Strikers%20of%20Interest.png)
 ![Shot-Creating Action (SCA) Live-Ball Passes vs Goal-Creating Action (GCA) Live-Ball Passes for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Shot-Creating%20Action%20(SCA)%20Live-Ball%20Passes%20vs%20Goal-Creating%20Action%20(GCA)%20Live-Ball%20Passes%20for%20U23%20Strikers%20of%20Interest.png)
 ![Passes Successfully Received vs Live Touches for U23 Strikers of Interest](/Resources/Project%20Images/Graph%20Images/Passes%20Successfully%20Received%20vs%20Live%20Touches%20for%20U23%20Strikers%20of%20Interest.png)
+
+
 
 ### Post-Project Reflections
 
