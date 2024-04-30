@@ -1,7 +1,7 @@
 # Football Player Analysis
 
 ## Introduction
- 
+  
 This data science project is going to explore the intersection of English football - not gridiron handegg - with data. I have included a backstory to help visualise the power of data - both to unearth bargains and hidden talent, but also more crucially to democratise the world. The correct application of data can prioritise those key performane metrics, potentially rewarding those footballers who are playing well and doing good things on the pitch. 
 
 *How many players have missed out on opportunities to hit the big leagues, despite having feet kissed by God, due to chance, poverty, the birthplace lottery, and other similar circumstances of 'fate'?* For whatever reason, their spark got missed, the opportunity passsed, and they ended up nowhere near their potential. For various reasons, a minority of players like Jamie Vardy and N'Golo Kante have demonstrated to the sports world that talent exists, yet is regularly missed. Data can help us see with clearer, truer vision, and this is what I have shown with this project.
