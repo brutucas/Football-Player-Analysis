@@ -1,4 +1,4 @@
-# Football Player Analysis
+# Shaolin.FC: Football Player Data Analysis and Visualisation
 
 ## Introduction
   
